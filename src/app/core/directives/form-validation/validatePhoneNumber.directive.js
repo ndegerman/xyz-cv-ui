@@ -3,9 +3,9 @@
 
     angular
         .module('core.directives')
-        .directive('validatewords', validatewords);
+        .directive('validatephonenumber', validatephonenumber);
 
-    function validatewords() {
+    function validatephonenumber() {
         var directive = {
             restrict: 'A',
             require: 'ngModel',
@@ -17,9 +17,9 @@
         //////////////
 
         function link (scope, elem, attr, ngModel) {
-            var regex = /^[A-Z åäöÅÄÖ&]{0,100}$/i;
+            var regex = /^[0-9+" "]{0,20}$/;
             ngModel.$parsers.unshift(function(value) {
-                ngModel.$setValidity('validatewords', regex.test(value));
+                ngModel.$setValidity('validatephonenumber', regex.test(value));
                 return value;
             });
         }

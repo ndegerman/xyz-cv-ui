@@ -14,61 +14,52 @@
             overflow: hidden;
             text-overflow: clip;
             white-space:nowrap;
+            .item-content {
+                display: flex;
+                flex-flow: row wrap;
+            }
             .item-buttons {
                 width: 40px;
                 min-width: 40px;
             }
-            .deletebutton-expander {
-                display: flex;
-                width: 100%;
-                .deletebutton {
-                    @include transition(all 0.3s ease);
-                    max-width: 3px;
-                    min-width: 3px;
-                    display: inline-block;
-                    color: rgba(255, 255, 255, 0);
-                    background-color: red;
-                    text-align: center;
-                    line-height: 58px;
-                    font-size: 20px;
-                }
-                &:hover .deletebutton {
-                    min-width: 100%;
-                    max-width: 100%;
-                    color: rgba(255, 255, 255, 1);
-                }
+            .deletebutton {
+                @include transition(all 0.3s ease);
+                min-width: 100%;
+                max-width: 100%;
+                display: inline-block;
+                color: rgba(255, 255, 255, 1);
+                background-color: red;
+                text-align: center;
+                line-height: 58px;
+                font-size: 20px;
+                cursor: pointer;
             }
-            .editbutton-expander {
-                display: flex;
-                flex-direction: row-reverse;
-                width: 100%;
-                .editbutton {
-                    @include transition(all 0.3s ease);
-                    max-width: 3px;
-                    min-width: 3px;
-                    display: inline-block;
-                    color: rgba(255, 255, 255, 0);
-                    background-color: #337ab7;
-                    text-align: center;
-                    line-height: 58px;
-                    font-size: 20px;
-                }
-                &:hover .editbutton {
-                    min-width: 100%;
-                    max-width: 100%;
-                    color: rgba(255, 255, 255, 1);
-                }
+            .editbutton {
+                @include transition(all 0.3s ease);
+                min-width: 100%;
+                max-width: 100%;
+                display: inline-block;
+                color: rgba(255, 255, 255, 1);
+                background-color: #337ab7;
+                text-align: center;
+                line-height: 58px;
+                font-size: 20px;
+                cursor: pointer;
             }
             .name {
-                display: block;
                 font-weight: bold;
+                flex-basis: 100%;
             }
             .level {
-                display: inline-block;
-                width: 100px;
+                width: 70px;
+                flex-basis: 33%;
             }
             .years {
-                display: inline-block;
+                flex-basis: 33%;
+            }
+            .futureLevel {
+                width: 100px;
+                flex-basis: 33%;
             }
         }
 
