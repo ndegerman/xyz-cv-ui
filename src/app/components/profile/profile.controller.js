@@ -5,7 +5,7 @@
         .module('xyz-cv-ui.profile')
         .controller('ProfileController', ProfileController);
 
-        function ProfileController(ProfileModel, $routeParams, session, API_URL, GeneralInfoModal, ImageModal, PrivateInfoModal, SummaryModal, SkillsModal, AssignmentsModal) {
+        function ProfileController(ProfileModel, $routeParams, session, API_URL, GeneralInfoModal, ImageModal, PrivateInfoModal, SummaryModal, SkillsModal, AssignmentsModal, CertificatesModal) {
             var vm = this;
             window.vm = vm;
 
@@ -23,6 +23,7 @@
             vm.summaryModal = {};
             vm.skillsModal = {};
             vm.assignmentsModal = {};
+            vm.certificatesModal = {};
             vm.showModal = showModal;
 
             /* GENERAL INFO */
@@ -111,6 +112,7 @@
                         setSummaryModal();
                         setSkillsModal();
                         setAssignmentsModal();
+                        setCertificatesModal();
                         vm.activated = true;
                     });
             }
@@ -239,6 +241,10 @@
 
             function setAssignmentsModal() {
                 vm.assignmentsModal = AssignmentsModal;
+            }
+
+             function setCertificatesModal() {
+                vm.certificatesModal = CertificatesModal;
             }
         }
 })();

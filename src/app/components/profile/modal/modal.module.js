@@ -8,9 +8,11 @@
         'shared.customers',
         'shared.domains',
         'shared.assignments',
+        'shared.certificates',
         'shared.userToOffice',
         'shared.userToSkill',
         'shared.userToAssignment',
+        'shared.userToCertificate',
         'shared.uploader',
         'angularUtils.directives.dirPagination',
         'textAngular'
